@@ -1,0 +1,8 @@
+<h1>Upload Menu Book</h1>
+<%= form_with(url: menu_items_path, local: true, html: { multipart: true }) do |form| %>
+  <%= form.file_field :csv_file %>
+  <%= form.submit 'Upload' %>
+
+  <%= link_to 'Back to Menu Items', root_path, class: 'btn btn-secondary' %>
+
+<% end %>
